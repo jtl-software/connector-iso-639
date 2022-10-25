@@ -32,7 +32,7 @@ class Language
      *
      * @return string
      */
-    public function code1()
+    public function code1(): string
     {
         return $this->code1;
     }
@@ -42,7 +42,7 @@ class Language
      *
      * @return string
      */
-    public function code2t()
+    public function code2t(): string
     {
         return $this->code2t;
     }
@@ -52,7 +52,7 @@ class Language
      *
      * @return string
      */
-    public function code2b()
+    public function code2b(): string
     {
         return $this->code2b;
     }
@@ -62,7 +62,7 @@ class Language
      *
      * @return string
      */
-    public function code3()
+    public function code3(): string
     {
         return $this->code3;
     }
@@ -72,7 +72,7 @@ class Language
      *
      * @return string
      */
-    public function name()
+    public function name(): string
     {
         return $this->name;
     }
@@ -82,7 +82,7 @@ class Language
      *
      * @return string
      */
-    public function nativeName()
+    public function nativeName(): string
     {
         return $this->nativeName;
     }
