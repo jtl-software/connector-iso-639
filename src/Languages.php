@@ -201,7 +201,7 @@ class Languages implements \IteratorAggregate
      *
      * @return Language[]
      */
-    public function getLanguages()
+    public function getLanguages(): array
     {
         return array_map(function ($language) {
             return new Language($language[0], $language[1], $language[2], $language[3], $language[4], $language[5]);
@@ -215,7 +215,7 @@ class Languages implements \IteratorAggregate
      *
      * @return Language
      */
-    public function findByCode1($code)
+    public function findByCode1($code): Language
     {
         return $this->find(0, $code);
     }
@@ -227,7 +227,7 @@ class Languages implements \IteratorAggregate
      *
      * @return Language
      */
-    public function findByCode2t($code)
+    public function findByCode2t($code): Language
     {
         return $this->find(1, $code);
     }
@@ -239,7 +239,7 @@ class Languages implements \IteratorAggregate
      *
      * @return Language
      */
-    public function findByCode2b($code)
+    public function findByCode2b($code): Language
     {
         return $this->find(2, $code);
     }
@@ -251,7 +251,7 @@ class Languages implements \IteratorAggregate
      *
      * @return Language
      */
-    public function findByCode3($code)
+    public function findByCode3($code): Language
     {
         return $this->find(3, $code);
     }
@@ -263,7 +263,7 @@ class Languages implements \IteratorAggregate
      *
      * @return Language
      */
-    public function findByName($name)
+    public function findByName($name): Language
     {
         return $this->find(4, $name);
     }
@@ -276,7 +276,7 @@ class Languages implements \IteratorAggregate
      *
      * @return Language
      */
-    protected function find($index, $value)
+    protected function find($index, $value): Language
     {
         foreach (static::$languages as $language) {
             if (strcasecmp($language[$index], $value) === 0) {
@@ -290,7 +290,7 @@ class Languages implements \IteratorAggregate
     /**
      * {@inheritdoc}
      */
-    public function getIterator()
+    public function getIterator(): \Traversable
     {
         return new \ArrayIterator($this->getLanguages());
     }
